@@ -3,9 +3,22 @@ ZenPacks.community.GroupMeNotifier
 Command suitable for sending Zenoss notification events to GroupMe.
 
 
+Requirements
+=======
+This is for Zenoss 4.x.
+
+It was tested on CentOS 6 64-bit and Zenoss 4.2.5.
+
+You will need Ruby 1.8+ installed along with some gems.
+```bash
+sudo yum install ruby rubygems ruby-json
+sudo gem install thor
+sudo gem install json
+```
+
+
 Install
 =======
-
 Download the Python egg:
 ```bash
 su zenoss -
