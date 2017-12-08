@@ -53,21 +53,21 @@ it is enabled, and that you have added the Trigger you created earlier. The
 command does support clear messages, so go ahead and check that option if you
 like.
 
-You also need to provide the GroupMe BOT ID using the environment variable
-``GROUPME_BOT_ID``
+You also need to provide the [GroupMe Bot ID](https://dev.groupme.com/bots)
+using the environment variable ``GROUPME_BOT_ID``
 
 Now on the ``Content`` tab of the notification paste the following into the
 ``Command`` field:
 
 ```bash
-export GROUPME_BOT_ID="=<YOUR GROUPME BOT ID>"
+export GROUPME_BOT_ID="<YOUR GROUPME BOT ID>"
 /opt/zenoss/ZenPacks/ZenPacks.community.GroupMeNotifier-1.0.0-py2.7.egg/ZenPacks/community/GroupMeNotifier/libexec/command.rb --device="${evt/device}" --info=${evt/summary} --component="${evt/component}" --severity=${evt/severity} --url="${urls/eventUrl}" --message=${evt/message}
 ```
 
 And if you want to use the clear option, for the clear command:
 
 ```bash
-export GROUPME_BOT_ID="=<YOUR GROUPME BOT ID>"
+export GROUPME_BOT_ID="<YOUR GROUPME BOT ID>"
 /opt/zenoss/ZenPacks/ZenPacks.community.GroupMeNotifier-1.0.0-py2.7.egg/ZenPacks/community/GroupMeNotifier/libexec/command.rb --device="${evt/device}" --info=${evt/summary} --component="${evt/component}" --severity=${evt/severity} --url="${urls/eventUrl}" --message=${evt/message} --cleared-by="${evt/clearid}" --clear
 ```
 
