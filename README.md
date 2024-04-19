@@ -1,3 +1,7 @@
+#### :warning: This repository has been archived.
+
+---
+
 ZenPacks.community.GroupMeNotifier
 =============
 Command suitable for sending Zenoss notification events to GroupMe.
